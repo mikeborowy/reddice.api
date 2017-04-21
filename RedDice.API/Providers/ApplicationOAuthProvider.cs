@@ -31,13 +31,26 @@ namespace RedDice.API.Providers
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
-            ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
-
+            var user = await userManager.FindByNameAsync(context.UserName);
             if (user == null)
             {
-                context.SetError("invalid_grant", "The user name or password is incorrect.");
+                context.SetError("identifier", "The user name is incorrect.");
                 return;
             }
+
+            var password = await userManager.CheckPasswordAsync(user, context.Password);
+            if (!password)
+            {
+                context.SetError("password", "The password is incorrect.");
+                return;
+            }
+
+            //ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
+            //if (user == null)
+            //{
+            //    context.SetError("invalid_grant", "The user name or password is incorrect.");
+            //    return;
+            //}
 
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager,
                OAuthDefaults.AuthenticationType);
