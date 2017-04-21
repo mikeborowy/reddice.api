@@ -238,9 +238,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704211106378_InitialCreate.cs" />
-    <Compile Include="Migrations\201704211106378_InitialCreate.Designer.cs">
-      <DependentUpon>201704211106378_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201704211343082_ChangeTablesName.cs" />
+    <Compile Include="Migrations\201704211343082_ChangeTablesName.Designer.cs">
+      <DependentUpon>201704211343082_ChangeTablesName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704211347071_Fixes.cs" />
+    <Compile Include="Migrations\201704211347071_Fixes.Designer.cs">
+      <DependentUpon>201704211347071_Fixes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -327,8 +331,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704211106378_InitialCreate.resx">
-      <DependentUpon>201704211106378_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704211343082_ChangeTablesName.resx">
+      <DependentUpon>201704211343082_ChangeTablesName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704211347071_Fixes.resx">
+      <DependentUpon>201704211347071_Fixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

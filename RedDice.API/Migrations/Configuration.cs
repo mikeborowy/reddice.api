@@ -9,7 +9,7 @@ namespace RedDice.API.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "RedDice.API.Models.ApplicationDbContext";
         }
 
