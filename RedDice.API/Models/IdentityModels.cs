@@ -21,7 +21,7 @@ namespace RedDice.API.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("RedDiceConnection", throwIfV1Schema: false)
         {
         }
         
