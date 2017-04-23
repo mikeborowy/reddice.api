@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedDice.API", "RedDice.API\RedDice.API.csproj", "{62A13D39-8EE0-4007-A38E-F704EEBF5D10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedDiceCustom", "RedDiceCustom\RedDiceCustom.csproj", "{1904F87F-3656-430D-B006-55AC5D65201E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{62A13D39-8EE0-4007-A38E-F704EEBF5D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62A13D39-8EE0-4007-A38E-F704EEBF5D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62A13D39-8EE0-4007-A38E-F704EEBF5D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1904F87F-3656-430D-B006-55AC5D65201E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1904F87F-3656-430D-B006-55AC5D65201E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1904F87F-3656-430D-B006-55AC5D65201E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1904F87F-3656-430D-B006-55AC5D65201E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
