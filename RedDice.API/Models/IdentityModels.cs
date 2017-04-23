@@ -62,5 +62,7 @@ namespace RedDice.API.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<RedDice.API.Models.Event> Events { get; set; }
     }
 }

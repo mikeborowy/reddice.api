@@ -19,6 +19,7 @@ using RedDice.API.Results;
 
 namespace RedDice.API.Controllers
 {
+
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
