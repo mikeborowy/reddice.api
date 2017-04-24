@@ -250,6 +250,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CustomIdentityErrorDescriber.cs" />
+    <Compile Include="Helpers\Tools.cs" />
     <Compile Include="Migrations\201704211343082_ChangeTablesName.cs" />
     <Compile Include="Migrations\201704211343082_ChangeTablesName.Designer.cs">
       <DependentUpon>201704211343082_ChangeTablesName.cs</DependentUpon>
@@ -257,6 +258,14 @@
     <Compile Include="Migrations\201704211347071_Fixes.cs" />
     <Compile Include="Migrations\201704211347071_Fixes.Designer.cs">
       <DependentUpon>201704211347071_Fixes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704232232081_EventsTable.cs" />
+    <Compile Include="Migrations\201704232232081_EventsTable.Designer.cs">
+      <DependentUpon>201704232232081_EventsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704232242299_AddedAutoIncrement.cs" />
+    <Compile Include="Migrations\201704232242299_AddedAutoIncrement.Designer.cs">
+      <DependentUpon>201704232242299_AddedAutoIncrement.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -350,6 +359,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704211347071_Fixes.resx">
       <DependentUpon>201704211347071_Fixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704232232081_EventsTable.resx">
+      <DependentUpon>201704232232081_EventsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704232242299_AddedAutoIncrement.resx">
+      <DependentUpon>201704232242299_AddedAutoIncrement.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

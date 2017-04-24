@@ -9,7 +9,7 @@ namespace RedDice.API.Models
     [Table("Event")]
     public partial class Event
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EventId { get; set; }
 
         [Required]

@@ -21,8 +21,9 @@ namespace RedDice.API
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
+            /*It is enabled in Startup.Austh.cs*/
+            //var cors = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(cors);
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             config.Routes.MapHttpRoute(
