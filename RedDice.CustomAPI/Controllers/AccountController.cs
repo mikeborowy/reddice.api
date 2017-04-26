@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
 using RedDice.CustomAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -43,6 +45,14 @@ namespace RedDice.CustomAPI.Controllers
             return Ok();
         }
 
+        // POST api/Account/Logout
+        [Route("Logout")]
+        public IHttpActionResult Logout()
+        {
+            Authentication.SignOut(CookieAuthenticationDefaults.AuthenticationType);
+            return Ok();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -51,6 +61,11 @@ namespace RedDice.CustomAPI.Controllers
             }
 
             base.Dispose(disposing);
+        }
+
+        private IAuthenticationManager Authentication
+        {
+            get { return Request.GetOwinContext().Authentication; }
         }
 
         private IHttpActionResult GetErrorResult(IdentityResult result)

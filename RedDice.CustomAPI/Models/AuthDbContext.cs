@@ -9,7 +9,7 @@ namespace RedDice.CustomAPI.Models
     public class AuthDbContext: IdentityDbContext<IdentityUser>
     {
         public AuthDbContext()
-            : base("RedDiceConnection")
+            : base("RedDiceCustomConnection")
         {
 
         }

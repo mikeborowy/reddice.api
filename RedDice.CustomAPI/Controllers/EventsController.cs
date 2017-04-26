@@ -13,12 +13,13 @@ using RedDice.CustomAPI.Models;
 namespace RedDice.CustomAPI.Controllers
 {
 
-    [Authorize]
+    [RoutePrefix("api/Events")]
     public class EventsController : ApiController
     {
         private AuthDbContext db = new AuthDbContext();
 
         // GET: api/Events
+        [Authorize]
         public IQueryable<Event> GetEvents()
         {
             return db.Events;

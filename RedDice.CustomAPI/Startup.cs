@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using RedDice.CustomAPI.Providers;
@@ -18,14 +19,17 @@ namespace RedDice.CustomAPI
         public void Configuration(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();
-            WebApiConfig.Register(config);
-            app.UseWebApi(config);
 
             ConfigureOAuth(app);
+
+            WebApiConfig.Register(config);
+            app.UseWebApi(config);
         }
 
         public void ConfigureOAuth(IAppBuilder app)
         {
+            app.UseCors(CorsOptions.AllowAll);
+
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
@@ -37,6 +41,8 @@ namespace RedDice.CustomAPI
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+
+            app.UseCors(CorsOptions.AllowAll);
 
         }
     }

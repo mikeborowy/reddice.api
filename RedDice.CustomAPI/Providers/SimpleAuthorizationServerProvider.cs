@@ -15,6 +15,17 @@ namespace RedDice.CustomAPI.Providers
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
+        //private readonly string _publicClientId;
+
+        //public SimpleAuthorizationServerProvider(string publicClientId)
+        //{
+        //    if (publicClientId == null)
+        //    {
+        //        throw new ArgumentNullException("publicClientId");
+        //    }
+        //    _publicClientId = publicClientId;
+        //}
+
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
             context.Validated();
@@ -23,7 +34,7 @@ namespace RedDice.CustomAPI.Providers
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
 
-            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             using (AuthRepository _repo = new AuthRepository())
             {
